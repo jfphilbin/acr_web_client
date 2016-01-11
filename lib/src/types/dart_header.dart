@@ -1,9 +1,13 @@
 //TODO: copyright
 
 import 'dart:typed_data';
+
 import 'package:odw/content_type.dart';
 import 'package:odw/uuid.dart';
 
+import 'case.dart';
+import 'project.dart';
+import 'site.dart';
 
 enum WorkflowStep { submitted, revisionRequired, published }
 
@@ -27,16 +31,17 @@ enum ObjectType {
 /// The ACR DART (TODO: fix Data Archive Research Technology) header
 ///
 class DartHeader {
-  final Uuid id;
+  //TODO: make fields immutable
+  Uuid uuid;
 
   // An identifier for an object stored in DART.
-  final DateTime created;
-  final DateTime modified;
-  final int revision;
-  final String workflowStep;
+  DateTime created;
+  DateTime modified;
+  int revision;
+  WorkflowStep workflowStep;
 
   // max length 32
-  final ObjectType _type;
+  final ObjectType oType;
 
   // max length 32
   final ContentType contentType;
@@ -49,67 +54,22 @@ class DartHeader {
   // max length 16
   final Uint8List payload;
 
-  DartHeader.create
-
-  (
-
-  String oType, String
-
-  cType
-
-  ,
-
-  this
-
-  project
-
-  ,
-
-  this
-
-      .
-
-  site
-
-  ,
-
-  this
-
-      .
-
-  acrCcase
-
-  ,
-
-  this
-
-      .
-
-  payload
-
-  )
-
-  {
-  DateTime now = new DateTime(now);
-  id = new Uuid();
-  created = now;
-  modified = now;
-  revision = 0;
-  workflowStep = WorkflowStep.submitted; //TODO: finish
-  type = ObjectType.parse(otype);
-  contentType = ContentType.parse(cType);
-  project = Project.lookup(projId);
-  projectName = Project.name.lookup(projName);
-  siteId = Id.lookup(projId);
+  DartHeader(this.oType, this.contentType, this.project,
+      this.site, this.acrCase, this.payload) {
+    uuid = new Uuid();
+    created = new DateTime.now();
+    modified = created;
+    revision = 0;
+    workflowStep = WorkflowStep.submitted;
   }
 
   //TODO: can this be string and/or Uint8List
   static DartHeader parse(String header) {
-
+    return new DartHeader();
   }
 
   static DartHeader readJson(String s) {
-
+    return new DartHeader();
   }
 
   static void writeJson(DartHeader header) {

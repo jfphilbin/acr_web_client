@@ -2,6 +2,7 @@
 library review;
 
 import "dart:convert";
+import 'dart:html';
 
 import 'triad.dart';
 
@@ -176,7 +177,7 @@ GetDependentExamIdsWithView(callbackForGettingOfView) {
            "beforeSend": (jqXHR, settings) {
              jqXHR.url = settings.url;
            },
-           "error": () => ServiceFailed();
+    "error": () => ServiceFailed()
          });
 }
 
@@ -346,12 +347,13 @@ GetSupportDocsView(dependentExams) {
   List supportingDocs = [];
   Map input = {
       "PackageId": primaryparentID,
-      "UnitId:: secondaryparentID,
-      "ExamId: paramExamID"
+    "UnitId": secondaryparentID,
+    "ExamId": paramExamID
   };
   var supportingDocsPromise = GetFilesInfo(input,
                                                "",
-                                               wcfTriadAcreditServiceUrl + "/GetSupportingDocs",
+      Triad.wcfTriadAcreditServiceUrl + "/GetSupportingDo"
+          "cs",
                                                supportingDocs,
                                                "SupportingDocs");
   $.when.apply($, supportingDocsPromise).then((schemas) {
@@ -432,7 +434,7 @@ isContentDownloaded(safetyCounter) {
   }
   if (++safetyCounter > 300) return;
   setTimeout(() {
-    isContentDownloaded(safetyCounter)
+    isContentDownloaded(safetyCounter);
   }, 1000);
 }
 
@@ -448,10 +450,10 @@ showWarning(title, message) {
                                    "buttons": [
                                      {
                                        "text": "Ok",
-                                       "click":() {
-                                         $(this).dialog("close");
-                                         return true;
-                                       },
+                                       //"click":() {
+                                       //  $(this).dialog("close");
+                                       //  return true;
+                                       //},
                                        "class": "popupBtn"
                                      }
                                    ]
@@ -461,10 +463,10 @@ showWarning(title, message) {
 
 //HELP FUNCTIONS BEGIN
 getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  name = name.replace("[\[]", "\\[").replace("[\]]", "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
         results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  return results == null ? "" : decodeURIComponent(results[1].replace("+/g", " "));
 }
 
 
@@ -513,7 +515,7 @@ GenerateSelectionNameForUploadTable(selectionFiles) {
 
 replacer(key, value) => (key == "url") ? null : value;
 
-RemoveSymbols(str) => str.toLowerCase().replace(/\W/g, '');
+RemoveSymbols(str) => str.toLowerCase().replace("\W/g", '');
 
 //HELP FUNCTIONS END
 
@@ -533,7 +535,7 @@ checkCloseEvent() {
   setTimeout(checkCloseEvent, 100);
 }
 
-checkCloseEvent(); // execute function
+//checkCloseEvent(); // execute function
 
 checkWindowCloseEvent() {
   var cname = "cookie-close-windows=";
