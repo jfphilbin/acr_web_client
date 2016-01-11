@@ -1,0 +1,21 @@
+name: uploader
+description: >
+  A Client for uploading studies to Triad
+version: 0.1.1
+author: Jim Philbin <jfphilbin@gmail.com>
+homepage: http://www.acr.org
+#environment:
+#  uploader  : any
+dependencies:
+  args: any
+  charcode: any
+  collection: any
+  path: any
+  pub_semver: any
+  uuid: any
+dev_dependencies:
+  test: any
+transformers:
+- $dart2js:
+    minify: true
+    commandLineOptions: [--enable-enum]

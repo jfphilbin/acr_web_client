@@ -1,0 +1,138 @@
+{
+  "@type": "FileExtensions",
+  "@info": "Supported File Types for upload",
+  "BMRAP Clinical": {
+    "image": [
+      "DICOM",
+      "dcm"
+    ]
+  },
+  "CTAP Clinical": {
+    "image": [
+      "dicom",
+      "dcm",
+      "jpeg",
+      "jpg",
+      "png",
+      "gif",
+      "tiff",
+      "bmp"
+    ],
+    "video": [
+      "mov",
+      "mpg4",
+      "avi",
+      "mpg",
+      "mpeg",
+      "mp4",
+      "wmv"
+    ]
+  },
+  "MRAP Clinical": {
+    "image": [
+      "dicom",
+      "dcm",
+      "jpeg",
+      "jpg",
+      "png",
+      "gif",
+      "tiff",
+      "bmp"
+    ],
+    "video": [
+      "mov",
+      "mpg4",
+      "avi",
+      "mpg",
+      "mpeg",
+      "mp4",
+      "wmv"
+    ]
+  },
+  "NMAP Clinical": {
+    "image": [
+      "dicom",
+      "dcm",
+      "jpeg",
+      "jpg",
+      "png",
+      "gif",
+      "tiff",
+      "bmp"
+    ]
+  },
+  "PETAP Clinical": {
+    "image": [
+      "dicom",
+      "dcm",
+      "jpeg",
+      "jpg",
+      "png",
+      "gif",
+      "tiff",
+      "bmp"
+    ]
+  },
+  "UAP Clinical": {
+    "image": [
+      "dicom",
+      "dcm",
+      "jpeg",
+      "jpg",
+      "png",
+      "gif",
+      "tiff",
+      "bmp"
+    ]
+  },
+  "MAP Clinical": {
+    "image": [
+      "dicom",
+      "dcm"
+    ]
+  },
+  "CTAP (Phantom)": {
+    "image": [
+      "dicom",
+      "dcm"
+    ]
+  },
+  "MRAP (Phantom)": {
+    "image": [
+      "dicom",
+      "dcm"
+    ]
+  },
+  "NMAP (Phantom)": {
+    "image": [
+      "dicom",
+      "dcm",
+      "jpeg",
+      "jpg",
+      "png",
+      "gif",
+      "tiff",
+      "bmp"
+    ]
+  },
+  "PETAP (Phantom)": {
+    "image": [
+      "dicom",
+      "dcm",
+      "jpeg",
+      "jpg",
+      "png",
+      "gif",
+      "tiff",
+      "bmp"
+    ]
+  },
+  "MAP (Phantom)": {
+    "image": [
+      "dicom",
+      "dcm"
+    ]
+  }
+}
+
+

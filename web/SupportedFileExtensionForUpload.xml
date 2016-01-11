@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="SupportedFilesForUpload.xsl"?>
+<help>
+  <row>
+    <Modality>BMRAP Clinical</Modality>
+    <Images>DICOM</Images>
+    <Movies></Movies>
+  </row>
+
+  <row>
+    <Modality>CTAP Clinical</Modality>
+    <Images>DICOM|JPEG|JPG|PNG|GIF|TIFF|BMP</Images>
+    <Movies>MOV|MPG4|AVI|MPG|MPEG|MP4|WMV</Movies>
+  </row>
+
+  <row>
+    <Modality>MRAP Clinical</Modality>
+    <Images>DICOM|JPEG|JPG|PNG|GIF|TIFF|BMP</Images>
+    <Movies>MOV|MPG4|AVI|MPG|MPEG|MP4|WMV</Movies>
+  </row>
+
+  <row>
+    <Modality>NMAP Clinical</Modality>
+    <Images>DICOM|JPEG|JPG|PNG|GIF|TIFF|BMP</Images>
+    <Movies></Movies>
+  </row>
+
+  <row>
+    <Modality>PETAP Clinical</Modality>
+    <Images>DICOM|JPEG|JPG|PNG|GIF|TIFF|BMP</Images>
+    <Movies></Movies>
+  </row>
+
+  <row>
+    <Modality>UAP Clinical</Modality>
+    <Images>DICOM|JPEG|JPG|PNG|GIF|TIFF|BMP</Images>
+    <Movies></Movies>
+  </row>
+
+  <row>
+    <Modality>MAP Clinical</Modality>
+    <Images>DICOM</Images>
+    <Movies></Movies>
+  </row>  
+
+  <row>
+    <Modality>CTAP (Phantom)</Modality>
+    <Images>DICOM</Images>
+    <Movies></Movies>
+  </row>
+
+  <row>
+    <Modality>MRAP (Phantom)</Modality>
+    <Images>DICOM</Images>
+    <Movies></Movies>
+  </row>
+
+  <row>
+    <Modality>NMAP (Phantom)</Modality>
+    <Images>DICOM|JPEG|JPG|PNG|GIF|TIFF|BMP</Images>
+    <Movies></Movies>
+  </row>
+
+  <row>
+    <Modality>PETAP (Phantom)</Modality>
+    <Images>DICOM|JPEG|JPG|PNG|GIF|TIFF|BMP</Images>
+    <Movies></Movies>
+  </row>
+
+  <row>
+    <Modality>MAP (Phantom)</Modality>
+    <Images>DICOM</Images>
+    <Movies></Movies>
+  </row>
+</help>

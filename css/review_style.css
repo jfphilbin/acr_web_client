@@ -1,0 +1,1350 @@
+﻿html, body
+{
+    background:white;
+    height: 100%;
+    min-height: 100%;
+}
+
+body
+{
+    position:absolute; 
+    top:0; 
+    bottom:0; 
+    right:0; 
+    left:0;
+}
+
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 0px;
+}
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 2px 5px;
+    font-size: 13px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -moz-user-select: none;
+}
+
+.btn-primary {
+    color: #FFF;
+    background-color: #428BCA;
+    border-color: #357EBD;
+}
+
+
+upload {
+    color:white;
+    background-color: rgb(88,162,178);
+    border-color: #357EBD;
+    font-weight:bold;
+     margin-bottom:10px;
+}
+
+
+.fileUpload  span {
+    color:white;
+   
+}
+
+
+
+
+.show_hide {
+    display:none;
+}
+
+
+.divPackage
+{ 
+    width:100%;
+    background:rgb(56,64,79);
+    margin-top:3px;
+    padding:5px 5px 5px 20px;
+}
+
+
+.labelToggle
+{
+    color: rgb(255,255,230);
+    font: bold 16px "Arial";
+    padding: 0 0 0 5px;
+}
+
+.divPackageName
+{
+    width:100%; 
+    background:rgb(62,58,51); 
+    color:rgb(252,255,248); 
+    margin-bottom:20px;   
+    font: bold 17px "Arial";
+    vertical-align:middle;
+    height:25px;
+    padding-left:20px;
+    padding-top:5px;
+}
+
+.divPackageContainer
+{
+    background-color:rgb(191,185,164);
+    min-height:70%;
+}
+
+.divPackageSubContainer
+
+{
+    background-color:rgb(235,234,223);
+    min-height:230px;
+    border: 10px rgb(56,64,79) solid
+}
+
+.divPackageSummary
+{
+    padding-top:5px;
+    width:100%; 
+    background:rgb(56,64,79); 
+    color:rgb(252,255,248); 
+    margin-bottom:20px;   
+    font: bold 18px "Arial";
+    vertical-align:middle;
+    height:35px;
+    padding-left:20px;
+    padding-right:10px;
+}
+
+.divPackageSummary a
+{
+    cursor:pointer;
+    color: rgb(211,206,173);
+    font-size:15px;
+}
+
+.imgToggle
+{
+    width:17px;
+    height:17px;
+    padding-left:5px;
+    cursor:pointer;
+}
+
+.imgMetadata
+{
+    width:14px;
+    height:19px;
+    padding-left:5px;
+    cursor:pointer;
+}
+
+.imgImage
+{
+    width:25px;
+    height:17px;
+    padding-left:5px;
+    cursor:pointer;
+}
+
+.divInstruction
+{
+    text-align:center;
+    margin:2px;
+    padding:5px 10px 5px 10px;
+    overflow:auto;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+    background:rgb(255,254,243);
+    border:1px grey solid;
+    height:97%;
+}
+
+.divSubInstruction {
+    text-align:center;
+    border:1px grey solid;
+    background:rgb(235,234,225);
+    padding:2px 0px 2px 0px;
+    margin:5px 0px 5px 0px;
+}
+
+.instructionSubheaders
+{
+    text-decoration: underline; 
+    text-align:left;
+}
+
+.instructionSubheaders a
+{
+    cursor: pointer;
+}
+
+.instructionSubheaders2
+{
+    text-align:left;
+}
+
+
+.btn-submittpackage {
+    background-color: rgb(72,110,172);
+    border-color: #EEA236;
+    color:white;
+    font: bold 15px "Arial";
+}
+
+  .divSubmitPackage
+{
+      float:right;
+      cursor:pointer;
+      padding-right:40px;
+}
+
+.tblPackagesHeader
+{
+    color:rgb(51,70,87);
+    font: bold 15px "Arial";
+    background:white;
+    border:5px rgb(129,141,145) solid;
+    text-align:center;
+    width:100%;
+}
+
+.divMarginTop
+{
+    margin-top:10px;
+}
+
+.tblPackages
+{
+    width: 100%; height: 100%;
+}
+
+
+    .tblPackages td
+    {
+    }
+
+
+.tblPackagesTd1
+{
+    width: 18%;
+    height: 100%;
+    vertical-align: top;
+    background: rgb(116,128,133);
+}
+
+
+.tblPackagesTd2
+{
+    padding-top:3px;
+    width: 82%;
+    vertical-align: top;
+     background: rgb(116,128,133);
+     overflow:hidden;
+}
+
+.divMenuContainer
+{
+    background-color:rgb(236,233,232); width:98%; margin-top:5px; margin-left:10px; margin-right:20px; height:40px;
+}
+
+.divMainMenu
+{
+    float: right;
+    text-align: right;
+    font: bold 12px 'Arial';
+    padding-right: 10px;
+}
+
+.divMainMenu a, span
+{
+    color:rgb(22,20,27);
+}
+
+
+.divFooterMenu
+{
+    text-align: center;
+    font: bold 11px 'Arial';
+    background-color: rgb(236,233,232);
+    width: 99%;
+    margin-left: 10px;
+    margin-right: 20px;
+    height: 23px;
+    padding-top:7px;
+     -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    background:rgb(255,254,243);
+    border:1px grey solid;
+}
+
+    .divFooterMenu a
+    {
+        color: rgb(22,20,27);
+    }
+
+
+.tblPackagesFooter
+{
+width:100%;
+background:rgb(124,137,142);
+  height: 30px;
+}
+
+
+.dicomSelectionTable
+{
+    margin-left:2%;
+    margin-right:1%;
+    width:97%;
+    overflow:hidden;
+    border-width:0px;
+}
+
+
+
+.dicomSelectionSubTable
+{
+    margin-left:3%;
+    margin-right:1%;
+    width:96%;
+    overflow:hidden;
+    border-width:0px;
+}
+
+
+.nondicomSelectionSubTable
+{
+    margin-left:17%;
+    margin-right:1%;
+    width:82%;
+    overflow:hidden;
+    border-width:0px;
+}
+
+.nondicomSelectionSubTable td
+{
+    background:rgb(164,189,198);
+    color:white;
+    padding-right:20px;
+     font: bold 14px 'Arial';
+     padding-left:20px;
+     vertical-align:top;
+     text-align:left;
+}
+
+.nondicomSelectionSubTablePlustd
+{
+    width:23%;
+    min-width:150px;
+}
+.nondicomSelectionSubTabletd2
+{
+    width:77%;
+}
+
+.dicomSelectionTable td
+{
+    background:rgb(141,134,117);
+    color:white;
+    padding-right:20px;
+     font: bold 14px 'Arial';
+     padding-left:20px;
+     vertical-align:top;
+         width:10%;
+}
+
+.dicomSelectionSubTable td
+{
+    background:rgb(164,189,198);
+    color:white;
+    padding-right:20px;
+    width:10%;
+     font: bold 14px 'Arial';
+     padding-left:20px;
+     vertical-align:top;
+}
+
+.dicomFileTd
+{
+    border-bottom:1px gray solid;
+    font-weight:lighter
+}
+
+.dicomSelectionTableLastTd
+{
+     text-align:right;
+         padding-right:0px;
+}
+
+.labelToggleForSubtable
+{
+    margin-left:5px;
+    vertical-align:top;
+}
+
+.tblNonDicomTd1
+{
+    width:20%;
+}
+.tblNonDicomTd2
+{
+    width:80%;
+}
+
+
+
+
+
+.divListOfSupportedFilesContainer
+{
+    width:99%; 
+    background-color:white;
+    height:99%;
+}
+
+.divListOfSupportedFiles
+{
+    padding-left:2%;
+    padding-top:2%;
+    width:98%; 
+    background:rgb(56,64,79); 
+    color:rgb(252,255,248); 
+    margin-bottom:20px;   
+    font: bold 18px "Arial";
+    vertical-align:middle;
+    height:35px;
+}
+
+.divListOfSupportedFiles li
+{
+    color: black;
+}
+
+
+
+.dicomEditPackageTable
+{
+    margin-top:0px;
+    width:100%;
+    border-width:0px;
+}
+
+
+.dicomEditPackageTable td
+{
+    background:rgb(141,134,117);
+    color:white;
+    padding-right:20px;
+     font: bold 14px 'Arial';
+     padding-left:20px;
+     vertical-align:top;
+     width:25%;
+}
+
+
+
+
+
+
+/*new user interface*/
+.uploadImagesMainTable
+{
+    width: 100%;
+    overflow: hidden;
+    border-width: 0px;
+}
+    
+.uploadImagesMainTable td
+{
+    background: rgb(128,128,128);
+    color: white;
+    padding-right: 20px;
+    font: bold 14px 'Arial';
+    padding-left: 20px;
+    vertical-align: top;
+    min-width: 5%;
+    border-right: 2px white solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    vertical-align:middle;
+}
+
+.uploadImagesHeader td
+{
+    background: rgb(203,203,202) !important;
+    color: rgb(51,51,51) !important;
+    font: normal 12px 'Arial' !important;
+}
+
+.uploadImagesDicomFilesHeader td
+{
+    background: rgb(222,236,212) !important;
+    color: rgb(51,51,51) !important;
+    font: normal 12px 'Arial' !important;
+}
+
+
+.uploadImagesFileRow td
+{
+    background: white;
+    color: rgb(51,51,51);
+    font: normal 12px 'Arial';
+}
+
+
+.uploadImagesFileRowAlternative td
+{
+    background: rgb(241,241,241) !important;
+    color: rgb(51,51,51) !important;
+    font: normal 12px 'Arial'!important;
+}
+
+
+
+.btn-uploadfile {
+    color:white;
+    background-color: rgb(88,162,178);
+    border-color: #357EBD;
+    font-weight:bold;
+     margin-bottom:2px;
+}
+
+.btn-viewfile {
+    color:#0c3f6b;
+    background-color: #d4fce8;
+    border-color: #7ea1bf;
+    font-weight:normal;
+    margin-bottom:2px;
+    padding-bottom:3px;
+}
+
+.btn-uploadfile span {
+    color:white;
+   
+}
+
+.uploadImagesButtonContainer
+{
+    background: rgb(222,236,212);
+    color: rgb(51,51,51);
+    font: normal 12px 'Arial';
+    vertical-align:middle;
+    text-align:right;
+    padding-top:10px;
+    padding-right:10px;
+    margin-top:15px;
+
+    width:96%;
+    margin-left:2%;
+    margin-right:2%;
+}
+
+
+.divTestingPackage
+{ 
+    width:100%;
+    background:rgb(199,219,145);
+    margin-top:3px;
+    padding:5px 5px 5px 20px;
+   color: rgb(51,51,51);
+}
+
+
+.labelTestingPackageToggle
+{
+    font-family: verdana,tahoma,helvetica;
+    color: rgb(51,51,51);
+    font: bold 16px "Arial";
+    padding: 0 0 0 5px;
+}
+
+
+.divReadyForSubmission
+{
+     color: rgb(51,51,51);
+    font: bold 12px "Arial";
+   float:right;
+}
+
+.divViewButtons
+{
+   float:right; 
+}
+
+.divViewButtons input
+{
+  margin-right:10px;
+}
+
+.divAttestestation
+{
+     color: rgb(51,51,51);
+    font: bold 12px "Arial";
+   float:left;
+}
+
+
+#progress {
+border: 0px solid black;
+ position: relative;
+ padding: 3px;
+  width: 95%;
+  height: 18px;
+  color:white;
+  background-color: white;
+}
+
+
+#percent {
+    padding-top:1px;
+ position: absolute;   
+ left: 45%;
+ font-weight:bold;
+ font-size: 14px;
+ color:black;
+}
+
+#bar {
+    height:2.1em;
+    /*background-color: rgb(88,162,178);*/
+    background: url("images/ati-uploader/progressbar.png") repeat-x center top;
+}
+
+
+.linkButton
+{
+    text-decoration: underline; 
+    color:blue;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+
+.supportedFilesTable
+{
+    margin-top:2px;
+    overflow: hidden;
+    border-width: 0px;
+    width:100%;
+}
+ .supportedFilesTable th
+    {
+        height:30px;
+        background: rgb(203,203,202);
+        color: black;
+        padding-right: 20px;
+        font: bold 12px 'Arial';
+        padding-left: 10px;
+        vertical-align: top;
+        min-width: 5%;
+        border-right: 1px white solid;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        text-align: center;
+        vertical-align:middle;
+    }
+
+    .supportedFilesTable td
+    {
+        height:20px;
+        background: white;
+        color: black;
+        padding-right: 20px;
+        font:  12px 'Arial';
+        padding-left: 10px;
+        vertical-align: top;
+        min-width: 5%;
+        border: 1px lightgrey solid;
+        padding-top: 2px;
+        padding-bottom: 1px;
+        text-align: left;
+        vertical-align:middle;
+    }
+
+
+.divInstructions
+{
+    font-weight:bold;
+}
+
+.divInstructions span
+{
+    font-weight:normal;
+    margin-right:50px;
+}
+
+
+.divPopupNotification
+{
+
+background-color:White; 
+font-size:14px; 
+font-weight:bold; 
+text-align:left;
+}
+
+.divNotificationContainer
+{
+    background-color:White;
+}
+
+
+
+.main-dialog-class .ui-widget-header
+{
+    background:rgb(88,162,178);
+    background-color: rgb(88,162,178);
+    font-size: 16px;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.main-dialog-class .ui-widget-content
+{
+    background-image: none;
+    background-color: #fff;
+}
+
+.main-dialog-class .ui-dialog-titlebar-close
+{
+
+}
+
+.popupBtn span
+{
+    background-color: rgb(88,162,178);
+    font-size: 15px;
+    color: White;
+}
+
+
+
+.uploadIcon
+{
+    padding-left:5px;
+    cursor:pointer;
+}
+
+.fileUpload2 {
+	position: relative;
+	overflow: hidden;
+	margin: 10px 10px 10px 0;
+}
+.fileUpload2 input.upload2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.btn-disabled{
+    background-color: rgb(211,211,211) !important;
+    border: 1px solid rgb(203, 203, 203) !important;
+}
+
+
+
+.btn-uploadfile2 {
+    color:white;
+    background-color: transparent;
+    border-color:transparent;
+    font-weight:bold;
+     margin-bottom:2px;
+}
+
+.btn-uploadfile2 span {
+    color:white;
+   
+}
+
+
+.btn2 {
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 2px 1px;
+    font-size: 13px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -moz-user-select: none;
+}
+
+
+
+.imgServerView
+{
+    cursor:pointer;
+}
+
+
+.uploadFailedFilesBtn
+{
+
+    cursor:pointer;
+}
+
+
+
+.tblLogStatus
+{
+    width:99%;
+    background-color: rgb(203,255, 206);
+    color: rgb(0, 158, 0);
+    vertical-align: middle;
+    margin-top :5px;
+    border-collapse: collapse;
+}
+
+.tblLogStatus span{
+    background-color: rgb(203,255, 206) !important;
+    color: rgb(0, 158, 0) !important;
+}
+
+
+.tblLogStatus td
+{
+    padding-top:2px;
+}
+
+.tdClose
+{
+    width:15px;
+    padding-top:0px;
+    vertical-align:top;
+    cursor:pointer;
+}
+
+.divStaticViewHeader
+{
+    font-family: verdana,tahoma,helvetica;
+    clear: both;
+    display: block;
+    position: relative;
+    overflow:hidden;
+    margin-left:0%;
+    width:inherit;   
+    height:30px; 
+    padding-top:5px; 
+    padding-left:10px; 
+    padding-right:2%; 
+    font-size: 16px;     
+    font-weight: bold;
+    background-color:rgb(88, 162, 178); 
+    color:white;
+}
+
+.btn-staticView {
+    color:white;
+    background-color: rgb(185, 216, 162);
+    border-color: #357EBD;
+    font-weight:bold;
+    margin-bottom:2px;
+    min-width:100px;
+}
+
+.btn-staticView span {
+    color:white;
+}
+
+@page { size: landscape; 
+}
+
+
+
+.uploader-td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+a.main-link image,
+a.main-link label {
+    cursor: pointer !important;
+}
+
+#loadingDiv,
+#iframeLoadingDiv {
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0; 
+    z-index: 50; 
+    opacity: 0.4; 
+    background: #ccc;
+    text-align: center;
+}
+
+#loadingDiv:before,
+#iframeLoadingDiv:before
+{
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;  
+    height: 100%;
+    }
+
+#loadingDiv img,
+#iframeLoadingDiv img {
+    display: inline-block;
+    vertical-align: middle;  
+}
+
+.collapse {
+    background: url("../images/collapse.png") no-repeat;
+    width: 17px !important;
+    height: 17px !important;
+    display: inline-block;
+    background-size: 17px;
+    border:0px;
+}
+
+.expand {
+    background: url("../images/expand.png") no-repeat;
+    width: 17px !important;
+    height: 17px !important;
+    display: inline-block;
+    background-size: 17px;
+    border:0px;
+}
+
+.tblLogStatus td {
+    color: rgb(0, 158, 0) !important;
+    background: rgb(203, 255, 206) !important;
+}
+
+.tblLogStatus td[id^='tdStatusMessage'] {
+    padding-top: 7px; 
+}
+
+.upload-folder-icon-3 {
+    background: url("images/ati-uploader/upload_folder_icon3.png") no-repeat;
+    content: url("images/ati-uploader/upload_folder_icon3.png");
+    width: 61px;
+    height: 58px;
+    outline: none !important;
+}
+
+.upload-folder-grey-icon-3 {
+    background: url("images/ati-uploader/upload_folder_grey_icon3.png") no-repeat;
+    width: 61px;
+    height: 58px;
+    padding-left: 0px !important;
+    outline: none !important;
+}
+
+.upload-files-icon-3{
+    background: url("images/ati-uploader/upload_files_icon3.png") no-repeat;
+    content: url("images/ati-uploader/upload_files_icon3.png");
+    width: 55px;
+    height: 63px;
+    padding-left: 0px !important;
+    outline: none !important;
+}
+
+.view-content-grey-icon4 {
+   background: url("images/ati-uploader/view_content_grey_icon4.png") no-repeat;
+   content: url("images/ati-uploader/view_content_grey_icon4.png");
+   width: 82px;
+   height: 58px;
+   outline: none !important;
+    display: block;
+}
+
+.view-content-icon4 {
+    background: url("images/ati-uploader/view_content_icon4.png") no-repeat;
+    content: url("images/ati-uploader/view_content_icon4.png");
+    width: 82px;
+    height: 58px;
+    outline: none !important;
+}
+
+
+.nonDicomRow td {
+    background: #EBFFF5 !important;
+}
+
+.nonDicomRow td:first-child {
+    background: white !important;
+}
+
+.popup_container {
+    min-width: 750px  !important;
+}
+
+.popup_content{
+    max-width: 700px !important;
+    min-width: 700px  !important;
+}
+
+
+.reviewTable
+{
+    margin:0px;
+    border-width: 0px;
+    color: black;
+    font: normal 12px 'Arial';		
+    text-align: left;
+    vertical-align:middle;
+    background: #EBFFF5;
+}
+
+.reviewTable th
+{
+  height:25px;
+  background: #aaaaaa;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  font: bold 12px 'Arial';
+  border-right: 1px white solid;
+}
+
+.reviewTable td
+{
+  height:20px;
+  color: black;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  border-right: 1px white solid;
+}
+
+.reviewTable .selected
+{
+  background: #b8d6c7;
+  font: bold 12px 'Arial';
+}
+
+.examsSeparator{
+    margin: 15px 0 10px 5px;
+    font: bold 12px 'Arial';
+}
+
+
+.ui-tooltip{
+    font-size: 12px !important;
+}
+
+#invalid-files-table, 
+#unfound-files-table
+{
+    color: black;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+#invalid-files-table th,
+#unfound-files-table th
+{
+    font: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(160, 160, 160);
+    width: 100%;    
+    height: 25px;    
+}
+
+#invalid-files-table td,
+#unfound-files-table td
+{
+    min-width:100px;
+}
+
+#invalid-files-table tr,
+#unfound-files-table tr
+{
+   margin-top: 5px;
+}
+
+
+#invalid-files-message,
+#unfound-files-message
+{
+    color: black;
+    background: none;
+    font-size: 12px !important;
+}
+
+
+.tblErrorStatus ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.invalid-files-popup{
+    border: 18px solid  rgb(88,162,178) !important;
+    border-radius: 0 !important;
+}
+
+.invalid-files-popup #popupNotification{
+    padding: 0 5px 5px 5px     !important;
+}
+
+.warning-message, 
+.warning-message span{
+    color: #9F6000 !important;
+    background-color: #FEEFB3 !important;
+}
+
+.warning-message span.icon, 
+.error-message span.icon, 
+.tblLogStatus span.icon{
+    font-size: 18px;
+    margin: 5px;
+}
+
+.error-message, 
+.error-message span {
+    color: #D8000C !important;
+    background-color: #FFBABA !important;
+}
+
+
+[id^=slidingDiv] th{
+    text-align: center;
+}
+
+[id^=slidingDiv] tr th:first-child{
+    text-align: left;
+}
+
+div.ui-tooltip {
+    max-width: 500px !important;
+    max-height: 400px !important;
+    overflow: hidden;
+    padding: 10px;
+}
+
+
+.divUploadMode
+{
+    margin-right: 5%;
+    font-size: 14px;
+    padding-bottom:0px;
+    margin-bottom: 0px;
+    height:30px;
+}
+
+
+.imgStatisIconUploadMode
+{
+    width:30px;
+    height:30px;
+    padding-left:5px;
+}
+
+.validationError {
+    color: red;
+    font-size: 12px;
+    margin-left: 15px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+#validationMessageBlock.validationError{
+    margin-left: 0;
+    display: inline-block;
+    float:left;
+}
+
+.filesCountLabels{
+    font-family: verdana,tahoma,helvetica;
+    display: inline-block;
+    text-align: right;
+    float: right;    
+    padding-right: 15px;
+    padding-top:5px;
+}
+
+.filesCountLabel{
+    font-size: 12px;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.filesCountLabelsStaticView{
+    width: 45% !important; 
+    text-align: left;
+}
+.viewButtonForStatic{
+    margin-right: 10%;
+    float: right;
+}
+
+.cancelRemoveButtonsContainer
+{
+    position: relative;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+}
+
+.cancelRemoveButtonsContainer img{
+    width: 17px !important;
+    height: 17px !important;
+    display: inline-block;
+    background-size: 17px;
+    border: none !important;
+}
+
+.cancelFileUploadProccess {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#closePopUpBtn{
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+    float: right;
+}
+
+
+.dicomImageFileTable td,
+tr.dcmStudyRow td:first-child,
+.dcmSeriesRow .dicomImageFileTable td:first-child,
+.th-empty {
+    background: white !important;
+}
+
+.dcmSeriesRow .dicomImageFileTable td {
+    color: rgb(51,51,51);
+    font-weight: normal;
+    font: normal 12px 'Arial';
+    background: #F5FAFF  !important;
+}
+
+.dicomImageFileTable tr td:last-child{
+    width: 75px;
+}
+
+
+.dicomImageFileTable
+{
+    width: 100%;
+    margin-top:2px;
+    overflow: hidden;
+    border-width: 0px;
+    padding-left: 10px;
+    background: rgb(203,203,202);
+
+}
+
+.dicomImageFileTable th
+{
+  height:25px;
+  background: rgb(203,203,202);
+  color: black;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-left: 10px;
+  text-align: left;	  
+  vertical-align:middle;	  
+  font: bold 12px 'Arial';
+  border-right: 1px white solid;
+}
+
+.dicomImageFileTable td
+{
+  height:20px;
+  margin:0px;
+  background: white;
+  color: black;
+  padding-right: 0px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 0px;
+  text-align: left;
+  vertical-align:middle;
+  font: normal 12px 'Arial';		
+  border-right: 1px white solid;		
+}
+
+.dicomImageFileTable a img{
+    cursor: pointer;
+}
+
+.dcmStudyRow td {
+  color: rgb(51,51,51);
+  font-weight: normal;
+  font: normal 12px 'Arial';
+  background: #EBFFF5  !important;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+}
+
+
+.seriesTable
+{
+  min-width:100%;
+  margin:0px; 
+}
+
+.seriesTable th
+{
+  background: #eeeeee;
+  color: black;
+ font: normal 12px 'Arial';
+}
+
+.seriesTable td
+{
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.nonDicomRow td
+{
+  color: #000000;
+  font: normal 12px 'Arial';
+  border-bottom: 1px solid white;
+  background: #EBFFF5  !important;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+}
