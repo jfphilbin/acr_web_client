@@ -2,6 +2,7 @@
 library review;
 
 import "dart:convert";
+import 'dart:html';
 
 import 'triad.dart';
 
@@ -141,7 +142,7 @@ $(document).ready( () {
     modalityNumber = getParameterByName('modalityNumber');
     if (modalityNumber == '') modalityNumber = null;
 
-    auditTrailLogger = new AuditTrail(wcfAuditTrailUrl, userName);
+    auditTrailLogger = new AuditTrail(Trial.wcfAuditTrailUrl, userName);
 	if (viewType == dicom_view_type)
         GetDependentExamIdsWithView(GetDicomView);
 	else if (viewType == nondicom_view_type)
@@ -164,7 +165,7 @@ GetDependentExamIdsWithView(callbackForGettingOfView) {
     "SelectedExamId": paramExamID};
   //TODO what does this mean?
   $.ajax({
-           "url": wcfTriadAcreditServiceUrl + '/GetDependentSelectedExams',
+    "url": Triad.wcfTriadAcreditServiceUrl + '/GetDependentSelectedExams',
            "type": 'POST',
            "dataType": 'json',
            "contentType": "application/json; charset=utf-8",
@@ -176,7 +177,7 @@ GetDependentExamIdsWithView(callbackForGettingOfView) {
            "beforeSend": (jqXHR, settings) {
              jqXHR.url = settings.url;
            },
-           "error": () => ServiceFailed();
+    "error": () => ServiceFailed()
          });
 }
 
@@ -194,7 +195,8 @@ GetDicomView(dependentExams) {
   //TODO what does this mean
   $.each(dependentExams, (index, value) {
     input.ExamId = value.ExamId;
-    var promise = GetFilesInfo(input, value.ExamName, wcfTriadAcreditServiceUrl + "/GetDicomFiles", dicomFiles, "DicomStudies");
+    var promise = GetFilesInfo(input, value.ExamName, Triad.wcfTriadAcreditServiceUrl + "/GetDicomF"
+        "iles", dicomFiles, "DicomStudies");
     dicomPromises.push(promise);
   });
 
@@ -285,7 +287,8 @@ GetNonDicomView(dependentExams) {
   //TODO fix
   $.each(dependentExams, (index, value) {
     input.ExamId = value.ExamId;
-    var promise = GetFilesInfo(input, value.ExamName, wcfTriadAcreditServiceUrl + "/GetNonDicomFiles", nonDicomFiles, "NonDicomFiles");
+    var promise = GetFilesInfo(input, value.ExamName, Triad.wcfTriadAcreditServiceUrl + "/GetNonDic"
+        "omFiles", nonDicomFiles, "NonDicomFiles");
     nonDicomPromises.push(promise);
   });
 
@@ -308,7 +311,8 @@ GetNonDicomView(dependentExams) {
           td = $('<td/>').text(nonDicomFiles[j].files[i].FileSize).css("width", "10%").appendTo(tbl4tr1);
           td = $('<td/>').text(nonDicomFiles[j].files[i].FileType).css("width", "10%").appendTo(tbl4tr1);
           td = $('<td/>').append(
-              " <a class='linkButton' onclick='ShowNonDicom(\"" + wcfTriadAcreditServiceUrl + "/GetNonDicomFileContent?fileId=" +
+              " <a class='linkButton' onclick='ShowNonDicom(\"" + Triad.wcfTriadAcreditServiceUrl +
+                  "/GetNonDicomFileContent?fileId=" +
                   nonDicomFiles[j].files[i].NonDicomFileId + "&fileType=" + nonDicomFiles[j].files[i].FileType + "&fileName=" +
                   nonDicomFiles[j].files[i].FileName + "\", this);' >View</a>").css("width", "10%").appendTo(tbl4tr1);
         }
@@ -346,12 +350,13 @@ GetSupportDocsView(dependentExams) {
   List supportingDocs = [];
   Map input = {
       "PackageId": primaryparentID,
-      "UnitId:: secondaryparentID,
-      "ExamId: paramExamID"
+    "UnitId": secondaryparentID,
+    "ExamId": paramExamID
   };
   var supportingDocsPromise = GetFilesInfo(input,
                                                "",
-                                               wcfTriadAcreditServiceUrl + "/GetSupportingDocs",
+      Triad.wcfTriadAcreditServiceUrl + "/GetSupportingDo"
+          "cs",
                                                supportingDocs,
                                                "SupportingDocs");
   $.when.apply($, supportingDocsPromise).then((schemas) {
@@ -388,7 +393,8 @@ AddRowsToSupportingDocsTable(table, files) {
   for (int i = 0; i < files.length; i++) {
     var tbl4tr1 = $('<tr/>').appendTo(table);
     var td = $('<td/>').text(files[i].FileName).appendTo(tbl4tr1);
-    var url = wcfTriadAcreditServiceUrl + "/GetSupportDocument?fileId=" + files[i].SupportingDocId + "&fileName=" + files[i].FileName;
+    var url = Triad.wcfTriadAcreditServiceUrl + "/GetSupportDocument?fileId=" + files[i]
+        .SupportingDocId + "&fileName=" + files[i].FileName;
     if (files[i].SupportingDocId < 0) url = files[i].PageUrl;
     td =
         $('<td/>').append(" <a class='linkButton' onclick='ShowSupportDoc(\"" + url + "\", this);' >View</a>").css("width", "10%").appendTo(
@@ -400,7 +406,8 @@ AddRowsToAppealLetterTable(table, files) {
   for (int i = 0; i < files.length; i++) {
     var tbl4tr1 = $('<tr/>').appendTo(table);
     var td = $('<td/>').text(files[i].FileName).appendTo(tbl4tr1);
-    var url = wcfTriadAcreditServiceUrl + "/GetSupportDocument?fileId=" + files[i].FileId + "&fileName=" + files[i].FileName;
+    var url = Triad.wcfTriadAcreditServiceUrl + "/GetSupportDocument?fileId=" + files[i].FileId + ""
+        "&fileName=" + files[i].FileName;
     if (files[i].FileId < 0) url = files[i].ViewUrl;
     td =
         $('<td/>').append(" <a class='linkButton' onclick='ShowSupportDoc(\"" + url + "\", this);' >View</a>").css("width", "10%").appendTo(
@@ -432,7 +439,7 @@ isContentDownloaded(safetyCounter) {
   }
   if (++safetyCounter > 300) return;
   setTimeout(() {
-    isContentDownloaded(safetyCounter)
+    isContentDownloaded(safetyCounter);
   }, 1000);
 }
 
@@ -448,10 +455,10 @@ showWarning(title, message) {
                                    "buttons": [
                                      {
                                        "text": "Ok",
-                                       "click":() {
-                                         $(this).dialog("close");
-                                         return true;
-                                       },
+                                       //"click":() {
+                                       //  $(this).dialog("close");
+                                       //  return true;
+                                       //},
                                        "class": "popupBtn"
                                      }
                                    ]
@@ -461,10 +468,10 @@ showWarning(title, message) {
 
 //HELP FUNCTIONS BEGIN
 getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  name = name.replace("[\[]", "\\[").replace("[\]]", "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
         results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  return results == null ? "" : decodeURIComponent(results[1].replace("+/g", " "));
 }
 
 
@@ -513,7 +520,7 @@ GenerateSelectionNameForUploadTable(selectionFiles) {
 
 replacer(key, value) => (key == "url") ? null : value;
 
-RemoveSymbols(str) => str.toLowerCase().replace(/\W/g, '');
+RemoveSymbols(str) => str.toLowerCase().replace("\W/g", '');
 
 //HELP FUNCTIONS END
 
@@ -533,7 +540,7 @@ checkCloseEvent() {
   setTimeout(checkCloseEvent, 100);
 }
 
-checkCloseEvent(); // execute function
+//checkCloseEvent(); // execute function
 
 checkWindowCloseEvent() {
   var cname = "cookie-close-windows=";
